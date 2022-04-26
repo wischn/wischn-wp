@@ -6,16 +6,16 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://gatsbywordpresshomepage.gatsbyjs.io/",
-    title: "Gatsby WordPress Homepage Starter",
-    author: `Gatsby`,
-    description: "A Gatsby Starter for building homepages with WordPress",
+    siteUrl: "https://buntmalerei.com",
+    title: "wischn",
+    author: `Annika Wischnewsky`,
+    description: "Manufaktur nachhaltiger Digitalisierung",
   },
   plugins: [
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        url: process.env.WPGRAPHQL_URL,
+        url: process.env.WPGRAPHQL_URL || `http://localhost.local/graphql`,
       },
     },
     "gatsby-plugin-sharp",
